@@ -10,3 +10,9 @@ function concatArray(what) {
   
   console.log(concatArray(biggerArray));
   
+
+  const dupeArray = [1, 1, 2, 3, 3, 4, 5];
+  const uniqueArray = [...new Set(dupeArray)];
+
+  console.log(uniqueArray);
+  
