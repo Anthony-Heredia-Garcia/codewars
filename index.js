@@ -10,9 +10,31 @@ function concatArray(what) {
   
   console.log(concatArray(biggerArray));
   
+  function removeDupes(dupes) {
+  
+  const uniqueArray = [...new Set(dupes)];
+  return uniqueArray;
+  }
 
   const dupeArray = [1, 1, 2, 3, 3, 4, 5];
-  const uniqueArray = [...new Set(dupeArray)];
+  console.log(removeDupes);
 
-  console.log(uniqueArray);
-  
+  function fun (aParam, bParam, cParam, dParam) {
+    console.log(aParam); // 'a'
+    console.log(bParam); // 'b'
+    console.log(cParam); // 'c'
+    console.log(dParam); // 'd'
+  }
+  const arr = [ 'b', 'c' ];
+  fun('a', ...arr,);
+
+  const multArray = [1, 2, 3, 4, 5];
+  function multiply(stoof) {
+      let product = 1;
+      for (var i=0; i<stoof.length; i++){
+          product = product * stoof[i];
+      }
+      return product;
+  }
+
+  console.log(multiply(multArray));
