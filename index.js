@@ -48,3 +48,7 @@ function concatArray(what) {
       return -num;
     }
   }
+
+  function opposite(number) {
+    return number * (-1);
+     }
