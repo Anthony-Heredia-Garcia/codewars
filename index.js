@@ -38,3 +38,13 @@ function concatArray(what) {
   }
 
   console.log(multiply(multArray));
+
+
+  function makeNegative(num) {
+    if (Math.sign(num) === -1) {
+      return num;
+    }
+    else {
+      return -num;
+    }
+  }
