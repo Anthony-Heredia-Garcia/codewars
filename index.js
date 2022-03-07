@@ -52,3 +52,14 @@ function concatArray(what) {
   function opposite(number) {
     return number * (-1);
      }
+
+
+   //remove first and last character of string given
+   function removeChar(str){
+    str = str.substring(1);
+    str = str.slice(0, -1); 
+    console.log(str)
+   
+   };
+
+   removeChar("Anthony");
