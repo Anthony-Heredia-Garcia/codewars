@@ -65,10 +65,16 @@ function concatArray(what) {
    removeChar("Anthony");
 
 
-   function solution(str){
-     let splitString = str.split("");
-     let reverseArray = splitString.reverse();
-     let joinArray = reverseArray.join("");
-     return joinArray;
+  //  function solution(str){
+  //    let splitString = str.split("");
+  //    let reverseArray = splitString.reverse();
+  //    let joinArray = reverseArray.join("");
+  //    return joinArray;
   
+  // }
+
+  function solution(str){
+    return str.split('').reverse().join('');  
   }
+
+  console.log(solution('Hello'));
