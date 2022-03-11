@@ -78,3 +78,10 @@ function concatArray(what) {
   }
 
   console.log(solution('Hello'));
+
+
+  const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(numbers);
+
+console.log(max);
