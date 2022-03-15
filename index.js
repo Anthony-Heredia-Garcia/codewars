@@ -82,6 +82,23 @@ function concatArray(what) {
 
   const numbers = [5, 6, 2, 3, 7];
 
-const max = Math.max.apply(numbers);
+const max = Math.max(numbers);
 
 console.log(max);
+
+
+function boolToWord( bool ){
+  if (bool === true) {
+    return "Yes";
+  }  else if (bool === false) {
+    return "No";
+  }
+}
+
+console.log (boolToWord(false));
+
+function repeatStr (n, s) {
+  let n;
+  let s;
+  return s.repeat([n])
+}
