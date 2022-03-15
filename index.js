@@ -95,10 +95,17 @@ function boolToWord( bool ){
   }
 }
 
-console.log (boolToWord(false));
+// console.log (boolToWord(false));
 
-function repeatStr (n, s) {
-  let n;
-  let s;
-  return s.repeat([n])
+// function repeatStr (n, s) {
+//   let n;
+//   let s;
+//   return s.repeat([n])
+// }
+
+function noSpace(x){
+  result = x.filter('');
+  return result; 
 }
+
+console.log(noSpace('This is a string.'));
