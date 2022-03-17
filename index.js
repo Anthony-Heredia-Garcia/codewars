@@ -104,8 +104,6 @@ function boolToWord( bool ){
 // }
 
 function noSpace(x){
-  result = x.filter('');
-  return result; 
+  x.replace(/\s/g, "");
+  return x;
 }
-
-console.log(noSpace('This is a string.'));
