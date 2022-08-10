@@ -101,3 +101,26 @@ function noSpace(x) {
 function solution(str, ending) {
   return str.endsWith(ending) ? true : false;
 }
+
+myArray = [1, 2, 2];
+
+function squareSum(numbers){
+ for (i = 0; i < numbers.length; i++) {
+   console.log(numbers.value);
+ }
+}
+
+squareSum(myArray);
+
+//Find the Needle in the Haystack
+let pile = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
+
+function findNeedle(haystack) {
+  for (item of haystack) {
+    if (item == "needle"){
+      return 'found the needle at position ' + haystack.indexOf(item);
+    }
+  }
+}
+
+console.log(findNeedle(pile));
