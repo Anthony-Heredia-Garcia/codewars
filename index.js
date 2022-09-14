@@ -138,3 +138,18 @@ function rentalCarCost(d) {
 }
 
 console.log(rentalCarCost(5));
+
+//Testing the .find() and .findIndex() methods
+
+const cats = [{name: 'Squeak'}, {name: 'Mew'}, {name: 'Pumpkin'}, {name: 'Loaf'}]
+
+const pumpkin = cats.find((user, idx, users) => {
+  return user.name === 'Pumpkin';
+})
+
+const loaf = cats.findIndex((user, idx, users) => {
+  return user.name === 'Loaf';
+})
+
+console.log(pumpkin);
+console.log(loaf);
