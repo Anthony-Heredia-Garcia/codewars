@@ -11,4 +11,15 @@ const showResults = (message, results) => {
   console.log(message);
 }
 
+const outerFunction = () => {
+  const innerFunction = () => {
+    console.log('Inner Function');
+  }
+  outerFunction.innerFunction= innerFunction;
+  console.log('Outer Function');
+}
+
+
+outerFunction();
+outerFunction.innerFunction();
 resultsHandler(showResults.bind(this, 'Here is the message'));
