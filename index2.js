@@ -13,10 +13,10 @@ const showResults = (message, results) => {
 
 const outerFunction = () => {
   const innerFunction = () => {
-    console.log('Inner Function');
+    console.log('Inner Function!');
   }
   outerFunction.innerFunction= innerFunction;
-  console.log('Outer Function');
+  console.log('Outer Function!');
 }
 
 
