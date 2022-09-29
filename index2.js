@@ -74,3 +74,14 @@ function countSheeps(arrayOfSheep) {
 
 console.log(countSheeps2(sheepPen));
 console.log(countSheeps(sheepPen));
+
+//create an array from big number, and reverse it
+
+const coolNumbers = 1234;
+
+function digitize(n) {
+  // let myFunc = num => Number(num);
+  return Array.from(String(n), num => Number(num)).reverse();
+}
+
+console.log(digitize(coolNumbers));
