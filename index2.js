@@ -80,7 +80,6 @@ console.log(countSheeps(sheepPen));
 const coolNumbers = 1234;
 
 function digitize(n) {
-  // let myFunc = num => Number(num);
   return Array.from(String(n), num => Number(num)).reverse();
 }
 
