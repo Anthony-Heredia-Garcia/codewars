@@ -43,7 +43,7 @@ function sum(arr) {
 console.log(sum(myNumbers));
 
 //Count Sheep are present
-const sheepPen = [true,  true, true, false,  true,  false];
+const sheepPen = [true, true, true, false, true, false];
 
 // function countSheeps(arrayOfSheep) {
 //   let i = 0;
@@ -55,17 +55,17 @@ const sheepPen = [true,  true, true, false,  true,  false];
 //   return i;
 // }
 
-const countSheeps2 = arrayOfSheep => {
+const countSheeps2 = (arrayOfSheep) => {
   let i = 0;
-  arrayOfSheep.forEach(element => {
+  arrayOfSheep.forEach((element) => {
     if (element === true) {
-      i++
+      i++;
     }
   });
   return i;
-}
+};
 
-//alternative and more beautiful way to write it 
+//alternative and more beautiful way to write it
 //Method Chaining
 
 function countSheeps(arrayOfSheep) {
@@ -80,7 +80,21 @@ console.log(countSheeps(sheepPen));
 const coolNumbers = 1234;
 
 function digitize(n) {
-  return Array.from(String(n), num => Number(num)).reverse();
+  return Array.from(String(n), (num) => Number(num)).reverse();
 }
 
 console.log(digitize(coolNumbers));
+
+//Square every digit of a number and concatenate
+
+const ourNumbers = 123; //answer should be 149
+
+function squareDigits(num) {
+  const squaredArray = [];
+  const arrayOfStrings = Array.from(String(num), (num) => Number(num));
+  for (const string of arrayOfStrings) {
+    squaredArray.push(string ** 2);
+  }
+  return parseInt(squaredArray.join(''));
+}
+console.log(squareDigits(ourNumbers));
