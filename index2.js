@@ -125,3 +125,21 @@ function countPositivesSumNegatives(input) {
 
 console.log(countPositivesSumNegatives(pan));
 console.log(countPositivesSumNegatives(pan2));
+
+// return a new array with each value doubled
+
+const doubleThis = [1, 2, 3];
+
+// function maps(x){
+//   let doubledArray = [];
+//   for (num of x) {
+//     doubledArray.push(num * 2);
+//   }; 
+//   return doubledArray;
+// }
+
+function maps(x) {
+  return x.map(num => num * 2);
+}
+
+console.log(maps(doubleThis));
