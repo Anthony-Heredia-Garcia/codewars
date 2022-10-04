@@ -98,3 +98,30 @@ function squareDigits(num) {
   return parseInt(squaredArray.join(''));
 }
 console.log(squareDigits(ourNumbers));
+
+// array of count of positives and sum of negatives
+
+const pan = [1, 2, 3, 4, -2, -3];
+const pan2 = [];
+
+function countPositivesSumNegatives(input) {
+  if (input.length == 0) {
+    return [];
+  }
+  let count = [];
+  let sum = 0;
+  let newArray = [];
+  for (num of input) {
+    if (!input) {
+      return;
+    } else if (num > 0) {
+      count.push(num);
+    } else if (num < 0) {
+      sum += num;
+    }
+  }
+  return (newArray = [count.length, sum]);
+}
+
+console.log(countPositivesSumNegatives(pan));
+console.log(countPositivesSumNegatives(pan2));
