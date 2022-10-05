@@ -134,12 +134,36 @@ const doubleThis = [1, 2, 3];
 //   let doubledArray = [];
 //   for (num of x) {
 //     doubledArray.push(num * 2);
-//   }; 
+//   };
 //   return doubledArray;
 // }
 
 function maps(x) {
-  return x.map(num => num * 2);
+  return x.map((num) => num * 2);
 }
 
 console.log(maps(doubleThis));
+
+//Given an integer, return a string with a murmur
+
+var countSheep = function (num) {
+  let sleeper = [];
+  for (let i = 0; i < num; i++) {
+    sleeper.push(`${i + 1}` + ' Sheep...');
+  }
+  return sleeper.join('');
+};
+
+/* Hey Anthony, here is a more conscise and shorter way of doing the above exercise! */
+
+var countSheep2 = function (num) {
+  let str = '';
+  for (let i = 1; i <= num; i++) {
+    str += `${i} sheep...`;
+  }
+  return str;
+};
+
+//The above function just adds onto the 'str' string with the += and then returns the long string
+
+console.log(countSheep(3));
