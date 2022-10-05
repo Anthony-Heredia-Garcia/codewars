@@ -167,3 +167,13 @@ var countSheep2 = function (num) {
 //The above function just adds onto the 'str' string with the += and then returns the long string
 
 console.log(countSheep(3));
+
+//Convert DNA to RNA -> Replace T with U
+
+const dna = 'GCATAGAT';
+
+function DNAtoRNA(dna) {
+  return dna.replace(/T/g, 'U');
+}
+
+console.log(DNAtoRNA(dna));
