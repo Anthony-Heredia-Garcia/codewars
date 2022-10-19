@@ -1,4 +1,4 @@
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 const numbers = [1, 2, 3, 4, 5, 6, 7];
 
 const resultsHandler = (cb) => {
@@ -177,3 +177,125 @@ function DNAtoRNA(dna) {
 }
 
 console.log(DNAtoRNA(dna));
+
+// Return sum of numbers between 2 given integers
+
+function getSum(a, b) {
+  const superhelper = [a, b];
+  [num1, num2] = superhelper.sort((a, b) => {
+    if (a < b) {
+      return -1;
+    } else if (a === b) {
+      return 0;
+    } else {
+      return 1;
+    }
+  });
+  num1;
+  num2;
+  let helper = [];
+  for (num1; num1 <= num2; num1++) {
+    helper.push(num1);
+  }
+  return helper.reduce((pre, cur) => {
+    return pre + cur;
+  });
+}
+
+console.log(getSum(-1, -10));
+
+function getSum2(a, b) {
+  let sum = 0;
+  if (a < b) {
+    for (a; a <= b; a++) {
+      sum += a;
+    }
+  } else if (a > b) {
+    for (a; a >= b; a--) {
+      sum += a;
+    }
+  } else {
+    return a;
+  }
+  return sum;
+}
+
+console.log(getSum2(0, -5));
+
+const GetSum = (a, b) => {
+  let min = Math.min(a, b),
+    max = Math.max(a, b);
+  min;
+  max;
+  return ((max - min + 1) * (min + max)) / 2;
+};
+
+console.log(GetSum(0, -5));
+testNumber = 0 - -5 + 1;
+testNumber;
+
+// Correct text recognition mistakes
+// 5 -> S, 0 -> O, 1 -> I
+
+const correctThis = '51NGAP0RE';
+
+// function correct(string) {
+//   const helper = Array.from(string);
+//   for (let i = 0; i < helper.length; i++) {
+//     if (helper[i] == 0){
+//       helper[i] = 'O'
+//     } else if (helper[i] == 5) {
+//       helper[i] = 'S'
+//     } else if (helper[i] == 1) {
+//       helper[i] = 'I'
+//     }
+//   }
+//   return helper.toString().replace(/,/g , '');
+// }
+
+function correct(string) {
+  return string.replace(/5/g, 'S' ).replace(/0/g, 'O').replace(/1/g, 'I')
+}
+
+console.log(correct(correctThis));
+
+//check if value X is included in array A
+const myString = 'Eliminate all the overhead setup Use the SOME method to see if one or more of the array entries matches our target Written in the form of a lambda arrow function to make it streamlined'
+const checkThis = myString.split(' ')
+const alsoThis = 'some'
+
+const checkThat = [107, 54, 39, 2];
+const alsoThat = 2
+
+// function check(a, x) {
+//   if (a.includes(x)){
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+function check(a,x) {
+  // const helper = a.toLowerCase();
+  // return a.filter(item => item.includes(x))
+  return a.some(e => e.toLowerCase() == x.toLowerCase())
+}
+
+console.log(check(checkThis, alsoThis))
+
+// How long until initial prinicipal equals desired sum
+
+function calculateYears(principal, interest, tax, desired) {
+  let years = 0;
+    for (let i = 1; principal < desired; i++) {
+      principal += ((principal * interest) - (principal * interest * tax));
+      years = i;
+    }
+    return years;
+}
+
+calculateYears(1000, 0.05, 0.18, 1100)
+
+// year 1 - (50 - 9) = 1041
+// year 2 - (52.05 - 9.37) = 1083.68
+// year 3 - (54.18 - 9.75) = 1128.11 off by .19
