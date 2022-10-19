@@ -299,3 +299,9 @@ calculateYears(1000, 0.05, 0.18, 1100)
 // year 1 - (50 - 9) = 1041
 // year 2 - (52.05 - 9.37) = 1083.68
 // year 3 - (54.18 - 9.75) = 1128.11 off by .19
+
+function areYouPlayingBanjo(name) {
+  let message;
+  name[0] === ('r'||'R')? message = `${name} plays banjo` : message = `${name} does not play banjo`
+  return message;
+}
