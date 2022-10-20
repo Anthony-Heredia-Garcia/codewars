@@ -1,10 +1,10 @@
 // const button = document.querySelector('button');
-const numbers = [1, 2, 3, 4, 5, 6, 7];
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
 
-const resultsHandler = (cb) => {
-  results = numbers.reduce((a, b) => a + b, 0);
-  cb(results);
-};
+// const resultsHandler = (cb) => {
+//   results = numbers.reduce((a, b) => a + b, 0);
+//   cb(results);
+// };
 
 const showResults = (message, results) => {
   console.log(results);
@@ -21,7 +21,7 @@ const outerFunction = () => {
 
 outerFunction();
 outerFunction.innerFunction();
-resultsHandler(showResults.bind(this, 'Here is the message'));
+// resultsHandler(showResults.bind(this, 'Here is the message'));
 
 //Sum array of numbers, can be negative or floats
 const myNumbers = [1, 2, 3, -9, 4.5];
@@ -254,18 +254,19 @@ const correctThis = '51NGAP0RE';
 // }
 
 function correct(string) {
-  return string.replace(/5/g, 'S' ).replace(/0/g, 'O').replace(/1/g, 'I')
+  return string.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I');
 }
 
 console.log(correct(correctThis));
 
 //check if value X is included in array A
-const myString = 'Eliminate all the overhead setup Use the SOME method to see if one or more of the array entries matches our target Written in the form of a lambda arrow function to make it streamlined'
-const checkThis = myString.split(' ')
-const alsoThis = 'some'
+const myString =
+  'Eliminate all the overhead setup Use the SOME method to see if one or more of the array entries matches our target Written in the form of a lambda arrow function to make it streamlined';
+const checkThis = myString.split(' ');
+const alsoThis = 'some';
 
 const checkThat = [107, 54, 39, 2];
-const alsoThat = 2
+const alsoThat = 2;
 
 // function check(a, x) {
 //   if (a.includes(x)){
@@ -275,26 +276,26 @@ const alsoThat = 2
 //   }
 // }
 
-function check(a,x) {
+function check(a, x) {
   // const helper = a.toLowerCase();
   // return a.filter(item => item.includes(x))
-  return a.some(e => e.toLowerCase() == x.toLowerCase())
+  return a.some((e) => e.toLowerCase() == x.toLowerCase());
 }
 
-console.log(check(checkThis, alsoThis))
+console.log(check(checkThis, alsoThis));
 
 // How long until initial prinicipal equals desired sum
 
 function calculateYears(principal, interest, tax, desired) {
   let years = 0;
-    for (let i = 1; principal < desired; i++) {
-      principal += ((principal * interest) - (principal * interest * tax));
-      years = i;
-    }
-    return years;
+  for (let i = 1; principal < desired; i++) {
+    principal += principal * interest - principal * interest * tax;
+    years = i;
+  }
+  return years;
 }
 
-calculateYears(1000, 0.05, 0.18, 1100)
+calculateYears(1000, 0.05, 0.18, 1100);
 
 // year 1 - (50 - 9) = 1041
 // year 2 - (52.05 - 9.37) = 1083.68
@@ -302,6 +303,45 @@ calculateYears(1000, 0.05, 0.18, 1100)
 
 function areYouPlayingBanjo(name) {
   let message;
-  name[0] === ('r'||'R')? message = `${name} plays banjo` : message = `${name} does not play banjo`
+  name[0] === ('r' || 'R')
+    ? (message = `${name} plays banjo`)
+    : (message = `${name} does not play banjo`);
   return message;
 }
+
+const nums = [1, 2, 3];
+
+function squareSum(numbers) {
+  if (numbers.length == 0) {
+    return 0;
+  }
+  if (numbers == null) {
+    return 0;
+  }
+  for (let i = 0; i < numbers.length; i++) {
+    numbers[i] = numbers[i] * numbers[i];
+  }
+  return numbers.reduce((prev, curr) => prev + curr);
+}
+
+console.log(squareSum([]));
+
+// sum together multiples of 3, 5 or both
+
+function solution(number){
+  if (!number || number < 0 || number === 3) {
+    return 0;
+  }
+  let multiples = [];
+  for (i = 0; i < number; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      multiples.push(i);
+    }
+  }
+
+  return multiples.reduce((a,b) => {
+    return a + b;
+  })
+}
+
+console.log(solution(4));
